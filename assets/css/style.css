@@ -1,0 +1,138 @@
+:root {
+    --background-color: #090e13;
+    --primary-color: #758B93;
+    --text-color-light: rgb(236, 244, 255);
+    --secondary-bg: #1B7A9E;
+    --secondary-bg-darker: #01435C;
+    --text-color: #00151D;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Calibri, sans-serif;
+
+}
+
+header {
+    /* display:none; */
+    color: var(--text-color-light);
+    min-height: 15vh;
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, purple, blue, rgb(255, 0, 0));
+
+    h1 {
+        /* position: absolute; */
+        /* top: 20px; */
+        font-size: 300%;
+        float:left;
+        /* bottom: 100px; */
+        text-shadow: 5px 5px 5px rgb(32, 64, 122);
+        /* background: linear-gradient(140deg, var(--secondary-bg), var(--background-color)60%); */
+        padding: 10px 10px 10px 20px;
+        font-family: 'Trebuchet MS', sans-serif;
+
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 28px;
+        color: var(--text-color-light);
+        display: inline-block;
+        text-shadow: 4px 4px 4px rgb(75, 138, 255);
+        padding: 35px 10px 5px 5px;
+    }
+
+    .menu {
+        text-align: right;
+        position: relative;
+        /* bottom: 100px; */
+        right: 1%;
+    }
+ 
+}
+
+body {
+    background-color: var(--background-color)
+}
+
+.banner {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 5px solid;
+        border-image-slice: 1;
+        border-width: 5px;
+        border-image-source: linear-gradient(to right, purple, blue, rgb(255, 0, 0));
+    }
+
+    .banner-quote {
+        position: absolute;
+        top:60%;
+        right: 2%;
+
+        h3 {
+            color: var(--text-color-light);
+            /* text-align: right; */
+            background-color: var(--secondary-bg-darker);
+            display: flex;
+            /* position: relative; */
+            /* left: 75%; */
+            /* bottom: 80px; */
+            width: 300px;
+            /* justify-content: flex-end; */
+            /* flex: 1 5 0; */
+        }
+    }
+    
+}
+
+body main div.bio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 10vh;
+    margin-top: 5px;
+
+    h2 {
+        width: 15vw;
+        border-right: 5px solid var(--text-color-light);
+        /* border-right-width: 5px; */
+        /* border-image: linear-gradient(180deg, var(--secondary-bg-darker)20%, var(--text-color-light) 20%) 1 100%; */
+        text-align: right;
+        padding-right: 10px;
+        color: var(--text-color-light)
+    }
+    
+    section {
+        margin-left: 20px;
+        width: 80vw;
+        min-height: 35vh;
+        width: 82vw;
+        padding: 10px;
+        /* border: 1px solid;
+        border-image-slice: 1;
+        border-width: 3px;
+        border-image-source: linear-gradient(to left, var(--background-color), var(--secondary-bg-darker)); */
+    
+    }
+
+    p {
+        color: var(--text-color-light);
+    }
+}
+
+.bio section {
+    /* background-image: url(../images/Yellowstone-22.jpg); */
+    /* background-size: contain; */
+}
+
+
+
+
