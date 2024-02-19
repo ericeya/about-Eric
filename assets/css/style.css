@@ -1,10 +1,11 @@
 :root {
     --background-color: #090e13;
-    --primary-color: #758B93;
-    --text-color-light: rgb(236, 244, 255);
+    --text-color-light: rgb(219, 228, 241);
     --secondary-bg: #1B7A9E;
-    --secondary-bg-darker: #01435C;
-    --text-color: #00151D;
+    --primary-color: #01435C;
+    --secondary-color: #758B93;
+    --text-color-dark: #00151D;
+    --portfolio-border: #310069;
 }
 
 * {
@@ -16,43 +17,58 @@
 }
 
 header {
-    /* display:none; */
-    color: var(--text-color-light);
-    min-height: 15vh;
+    height: 89px;
+}
+
+nav {
+    background-color: var(--background-color);
+    width: 100%;
+    font-family: 'Trebuchet MS', sans-serif;
     border-bottom: 5px solid;
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to left, purple, blue, rgb(255, 0, 0));
+    position: fixed;
+    top: 0 ;
+    z-index: 1;
+}               
 
-    h1 {
-        /* position: absolute; */
-        /* top: 20px; */
-        font-size: 300%;
-        float:left;
-        /* bottom: 100px; */
-        text-shadow: 5px 5px 5px rgb(32, 64, 122);
-        /* background: linear-gradient(140deg, var(--secondary-bg), var(--background-color)60%); */
-        padding: 10px 10px 10px 20px;
-        font-family: 'Trebuchet MS', sans-serif;
+nav ul {
+    margin-right: 5%;
+}
 
-    }
+#nav-name {
+    float: left;
+    list-style-type: none;
+    text-shadow: 5px 5px 5px rgb(75, 138, 255);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 10px 20px 30px;
+}
 
-    a {
-        text-decoration: none;
-        font-size: 28px;
-        color: var(--text-color-light);
-        display: inline-block;
-        text-shadow: 4px 4px 4px rgb(75, 138, 255);
-        padding: 35px 10px 5px 5px;
-    }
+.nav-links {
+    display: inline-block;
+    list-style: none;
+    padding: 28px 15px 0px 15px;
+    font-size: 24px;
+}
 
-    .menu {
-        text-align: right;
-        position: relative;
-        /* bottom: 100px; */
-        right: 1%;
-    }
- 
+nav li {
+    float: right;
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-family: 'Trebuchet MS', sans-serif;
+    /* padding: 10px; */
+}
+
+nav ul::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 body {
@@ -61,78 +77,387 @@ body {
 
 .banner {
     position: relative;
+}
 
-    img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 5px solid;
-        border-image-slice: 1;
-        border-width: 5px;
-        border-image-source: linear-gradient(to right, purple, blue, rgb(255, 0, 0));
-    }
+.banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to right, purple, blue, rgb(255, 0, 0));
+}
 
-    .banner-quote {
-        position: absolute;
-        top:60%;
-        right: 2%;
-
-        h3 {
-            color: var(--text-color-light);
-            /* text-align: right; */
-            background-color: var(--secondary-bg-darker);
-            display: flex;
-            /* position: relative; */
-            /* left: 75%; */
-            /* bottom: 80px; */
-            width: 300px;
-            /* justify-content: flex-end; */
-            /* flex: 1 5 0; */
-        }
-    }
+.banner-quote {
+    position: absolute;
+    top:50%;
+    right: 2%;
     
 }
 
-body main div.bio {
+.banner-quote h3 {
+    color: var(--text-color-light);
+    background: linear-gradient(120deg, rgba(255, 3, 3, 0.301), var(--primary-color));
+    border-radius: 5px;
+    text-shadow: 2px 2px 3px darkgray;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 10vh;
-    margin-top: 5px;
+    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    padding: 5px;
+}
 
-    h2 {
-        width: 15vw;
-        border-right: 5px solid var(--text-color-light);
-        /* border-right-width: 5px; */
-        /* border-image: linear-gradient(180deg, var(--secondary-bg-darker)20%, var(--text-color-light) 20%) 1 100%; */
-        text-align: right;
-        padding-right: 10px;
-        color: var(--text-color-light)
+.bio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 1%;
+}
+
+.title-bio {
+    border-right: 4px solid var(--text-color-light);
+    text-align: right;
+    padding-right: 20px;
+    color: var(--text-color-light);
+    padding-top: 1%;
+    width: 20%;
+    word-wrap:break-word;
+    font-size: 200%;
+    /* below code is for putting a border on right that stops in middle instead of the whole right side */
+    /* border-right-width: 5px; */
+    /* border-image: linear-gradient(180deg, var(--secondary-bg-darker)20%, var(--text-color-light) 20%) 1 100%; */
+}
+
+.content-bio{
+    margin: 1% 5% 1% 2%;
+    width: 65vw;
+    color: var(--text-color-light);
+}
+
+.portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 2%;
+    color: var(--text-color-light);
+    /* position: relative; */
+}
+
+.title-port {
+    width: 20%;
+    border-right: 4px solid var(--text-color-light);
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 1%;
+    font-size: 200%;
+    word-wrap: break-word;
+}
+
+.port-content-whole {
+    display: flex;
+    flex-flow: row wrap;
+    width: 65vw;
+    margin: 1% 5% 1% 2%;
+}
+
+.content-port1, .content-port2, .content-port3, .content-port4, .content-port5, .content-port6 {
+    border: 3px solid var(--portfolio-border);
+    transition: all 0.4s ease-in-out;
+}
+
+#hidden {
+    display:none;
+}
+
+#initial-display {
+    opacity: 0.3;
+}
+.content-port1 {
+    flex: 1 0 100%;
+    margin-right: 1%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 3px solid var(--portfolio-border);
+    
+    
+
+    img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        /* opacity: .3; */
+        object-position: left top;
+        transition: all 2s ease-in-out;
     }
-    
-    section {
-        margin-left: 20px;
-        width: 80vw;
-        min-height: 35vh;
-        width: 82vw;
-        padding: 10px;
-        /* border: 1px solid;
-        border-image-slice: 1;
-        border-width: 3px;
-        border-image-source: linear-gradient(to left, var(--background-color), var(--secondary-bg-darker)); */
-    
+
+    h3 {
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+        background-color: var(--portfolio-border);
+        padding: 5px 5% 5px 15px;
+        font-family: 'Trebuchet MS', sans-serif;
     }
 
     p {
-        color: var(--text-color-light);
+        position: absolute;
+        bottom: 13%;
+        right: 0%;
+        background-color: var(--portfolio-border);
+        padding: 5px 5% 5px 15px;
+        font-size: 16px;
+        font-family: 'Trebuchet MS', sans-serif;
     }
 }
 
-.bio section {
-    /* background-image: url(../images/Yellowstone-22.jpg); */
-    /* background-size: contain; */
+.content-port2, .content-port3 {
+    flex: 1 0 32%;
+    height: 300px;
+    margin-top: 2%;
+    margin-right: 2%
+}
+
+.content-port2, .content-port3, .content-port4 {
+    position: relative;
+    display: flex;
+    flex-direction: column;;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left top;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        padding: 5px 15px 5px 5%;
+        background-color: var(--portfolio-border);3
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        position: absolute;
+        bottom: 8%;
+        left: 0;
+        padding: 5px 15px 5px 5%;
+        background-color: var(--portfolio-border);
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+    }
+}
+
+.content-port4 {
+    flex: 1 0 32%;
+    height: 300px;
+    margin-top: 2%;
+
+    /* This is for placeholder for now */
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.content-port5 {
+    flex: 1 0 30%;
+    height: 300px;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.content-port6 {
+    flex: 1 0 30%;
+    height: 300px;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.content-port5, .content-port6 {
+    position: relative;
+    display: flex;
+    flex-direction: column;;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        object-position: left top;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        padding: 5px 15px 5px 5%;
+        background-color: var(--portfolio-border);3
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        position: absolute;
+        bottom: 8%;
+        left: 0;
+        padding: 5px 15px 5px 5%;
+        background-color: var(--portfolio-border);
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+    }
+}
+
+.content-port1:hover img#hidden,
+.content-port2:hover img#hidden, 
+.content-port3:hover img#hidden, 
+.content-port4:hover img#hidden,
+.content-port5:hover img#hidden,
+.content-port6:hover img#hidden {
+    display: flex;
+}
+
+.content-port1:hover,
+.content-port2:hover,
+.content-port3:hover,
+.content-port4:hover,
+.content-port5:hover,
+.content-port6:hover {
+    box-shadow: 0 0 20px blue;
+}
+
+.content-port1:hover img#initial-display,
+.content-port2:hover img#initial-display,
+.content-port3:hover img#initial-display,
+.content-port4:hover img#initial-display,
+.content-port5:hover img#initial-display,
+.content-port6:hover img#initial-display {
+    display: none;
+}
+
+.contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 2%;
+    color: var(--text-color-light);
+    /* position: relative; */
+}
+
+.title-contact {
+    width: 20%;
+    border-right: 4px solid var(--text-color-light);
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 1%;
+    font-size: 200%;
+    word-wrap: break-word;
+}
+
+.contact-content {
+    display: flex;
+    flex-flow: row wrap;
+    width: 65vw;
+    margin: 1% 5% 1% 2%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    
+
+    a {
+        flex: 1 0 0;
+        margin: auto;
+        padding: 10px;
+        font-size: 24px;
+        color: var(--text-color-light);
+       
+    }
+}
+
+.resume {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 2%;
+    color: var(--text-color-light);
+    /* position: relative; */
+}
+
+.title-resume {
+    width: 20%;
+    border-right: 4px solid var(--text-color-light);
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 1%;
+    font-size: 200%;
+    word-wrap: break-word;
+}
+
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin: 1% 5% 1% 2%;
+    height: auto;
+    
+    /* justify-content: space-around; */
+    /* align-items: flex-start; */
+    /* border: 2px solid white; */
+}
+
+.year {
+    display:flex;
+    flex-flow: row wrap;
+
+    h3 {
+        border-right: 3px solid var(--secondary-bg);
+        margin: 0px 10px 0px 30px;
+        width: 10%;
+        font-size: 150%;
+        padding-right: 20px;
+        text-align: right;
+    }
+    
+    p {
+        margin: 0px 0px 0px 10px;
+        padding-top: 5px; 
+    }
+}
+
+#current h3 {
+    padding-bottom: 2%;
+}
+
+#previous-end h3, #previous-start h3 {
+    border-right: 3px solid var(--primary-color);
+}
+
+#previous-end h3 {
+    padding-bottom: 2%;
+}
+
+#previous-start h3 {
+    padding-top: 2%;
 }
 
 
+footer {
+    height: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 5% 0;
 
-
+    h3 {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(119, 0, 255);
+    }
+}

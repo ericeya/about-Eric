@@ -8,58 +8,118 @@
 
 <header>
     <!-- <img src="./assets/images/header-bg.png" alt="Picture of sky"> -->
-    <h1>Eric Lee</h1>
-    <div class="menu">
-        <a href="">Bio</a>
-        <a href="">Portfolio</a>
-        <a href="">Contact</a>
-        <a href="">Resume</a>
-    </div>
+    <!-- <h1>Eric Lee</h1> -->
+    <nav>
+        <ul>
+            <li id="nav-name"><a href="">Eric Lee</a></li>
+            <li class="nav-links" id="resume"><a href="#resume">Resume</a></li>
+            <li class="nav-links" id="contact"><a href="#contact">Contact</a></li>
+            <li class="nav-links" id="portoflio"><a href="#portfolio">Portfolio</a></li>
+            <li class="nav-links" id="bio"><a href="#bio">About Me</a></li>
+    </ul>
+    </nav>
 </header>
 
 <body>
     <main>
         <figure class="banner">
-            <img src="./assets/images/bg.png" alt="Cool doodly background">
+            <img src="./assets/images/bg.png"
+                alt="Cool doodly background (source: https://alltimedesign.com/cool-wallpapers/)">
             <section class="banner-quote">
                 <h3>"Be yourself; everyone else is already taken." - Oscar Wilde</h3>
             </section>
         </figure>
-        <div class="bio">
-            <h2>Biography</h2>
-            <section>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem similique voluptatum saepe hic repellendus est sequi deleniti tempora, dolore quas veniam ab aliquid nemo amet rerum accusamus, minima voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem similique voluptatum saepe hic repellendus est sequi deleniti tempora, dolore quas veniam ab aliquid nemo amet rerum accusamus, minima voluptatibus?</p><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem similique voluptatum saepe hic repellendus est sequi deleniti tempora, dolore quas veniam ab aliquid nemo amet rerum accusamus, minima voluptatibus?</p>
-            </section>
-        </div>
-        <div class="portfolio">
-            <h2>Portfolio</h2>
-            <section>
-                <h3>content1</h3>
-                <p>CSS/HTML</p>
-            </section>
-            <section>
-                <h3>content2</h3>
-                <p>CSS</p>
-            </section>
-            <section>
-                <h3>content3</h3>
-                <p>HTML</p>
-            </section>
-            <section>
-                <h3>content4</h3>
-                <p>placeholder</p>
-            </section>
-            <section>
-                <h3>content5</h3>
-                <p>placeholder</p>
-            </section>
-            <section>
-                <h3>content6</h3>
-                <p>placeholder</p>
-            </section>
-        </div>
+
+        <section class="bio">
+            <h2 class="title-bio" id="bio">About<br>Me</h2>
+            <p class="content-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem similique
+                voluptatum saepe hic repellendus est sequi deleniti tempora, dolore quas veniam ab aliquid nemo amet
+                rerum accusamus, minima voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                voluptatem similique voluptatum saepe hic repellendus est sequi deleniti tempora, dolore quas veniam ab
+                aliquid nemo amet rerum accusamus, minima voluptatibus?<br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatem similique voluptatum saepe hic
+                repellendus est sequi deleniti tempora, dolore quas veniam ab aliquid nemo amet rerum accusamus, minima
+                voluptatibus?
+            </p>
+        </section>
+
+        <section class="portfolio" >
+            <h2 class="title-port" id="portfolio">Portfolio</h2>
+            <div class="port-content-whole">
+                <section class="content-port1">
+                    <img src="./assets/images/mortgage-buddy-ss-vscode.png" alt="Screenshot of VScode for Mortgage Buddy terminal app" id="initial-display">
+                    <img src="./assets/images/mortgage-buddy-ss-vscode.png" alt="Screenshot of VScode for Mortgage Buddy terminal app" id="hidden">
+                    <h3>Mortgage Buddy - terminal app</h3>
+                    <p>Python</p>
+                </section>
+                <section class="content-port2">
+                    <img src="./assets/images/screenshot-css-snippet2.png" alt="Screenshot of live webpage for CSS code snippet page" id="initial-display">
+                    <img src="./assets/images/screenshot-css-snippet2.png" alt="Screenshot of live webpage for CSS code snippet page" id="hidden">
+                    <h3>CSS Styling</h3>
+                    <p>HTML/CSS</p>
+                </section>
+                <section class="content-port3">
+                    <img src="./assets/images/my-webpage-screenshot.png" alt="Screenshot of live webpage for my webpage" id="initial-display">
+                    <img src="./assets/images/my-webpage-screenshot.png" alt="Screenshot of live webpage for my webpage" id="hidden">
+                    <h3>CSS Positioning</h3>
+                    <p>HTML/CSS</p>
+                </section>
+                <section class="content-port4">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="initial-display">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="hidden">
+                    <h3>content4</h3>
+                    <p>placeholder</p>
+                </section>
+                <section class="content-port5">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="initial-display">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="hidden">
+                    <h3>content5</h3>
+                    <p>placeholder</p>
+                </section>
+                <section class="content-port6">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="initial-display">
+                    <img src="./assets/images/hello-world-placeholder.png" alt="placeholder image with text of helloworld" id="hidden">
+                    <h3>content6</h3>
+                    <p>placeholder</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2 class="title-contact" id="contact">Contact<br>Me</h2>
+            <div class="contact-content">
+                <h3><a href="">818-307-7756</a></h3>
+                <h3><a href="">eric.hyunil.lee@gmail.com</a></h3>
+                <h3><a href="">Github/ericeya</a></h3>
+                <h3><a href="">LinkedIn</a></h3>
+            </div>
+        </section>
+
+        <section class="resume">
+            <h2 class="title-resume" id="resume">Resume</h2>
+            <div class="resume-content">
+                <div class="year" id="current">
+                    <h3>Current:</h3>
+                    <p>Full time student learning to code</p>
+                    
+                </div>
+                <div class="year" id="previous-end">
+                    <h3>Oct 2023 </h3>
+                    <p>Senior Government Underwriter at Kind Lending</p>
+                </div>
+                <div class="year" id="previous-start">
+                    <h3>Apr 2023 </h3>
+                    <p></p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <h2>🐣</h2>
+        <h3>"Carpe Diem" - Horace</h3>
+        
+    </footer>
 </body>
 
 </html>
