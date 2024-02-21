@@ -10,8 +10,11 @@ This repo is a little webpage about me and my path to engineering. As I learn ne
 
 ## Screenshot
 
-Coming soon
+![Screenshot of the working portfolio webpage demo](./assets/images/webpage-demo1.png)
+![Screenshot of the working portfolio webpage demo](./assets/images/webpage-demo2.png)
+![Screenshot of the working portfolio webpage demo](./assets/images/webpage-demo3.png)
+![Screenshot of the working portfolio webpage demo](./assets/images/webpage-demo4.png)
 
 ## Link to deploy
 
-Coming soon
+[https://ericeya.github.io/about-Eric](https://ericeya.github.io/about-Eric)
