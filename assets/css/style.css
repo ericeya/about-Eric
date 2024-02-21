@@ -59,17 +59,17 @@ nav ul {
 
 #portfolio {
     position: absolute;
-    top: 380px;
+    top: 550px;
 }
 
 #contact {
     position: absolute;
-    top: 1700px;
+    top: 1870px;
 }
 
 #resume {
     position: absolute;
-    top: 1900px;
+    top: 1920px;
 }
 /* above nav links positions are current view setting for 2560px width screen */
 
@@ -1132,3 +1132,131 @@ footer h3 {
     }
 }
 
+@media screen and (max-width: 390px) {
+
+    body {
+        width: 390px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0%;
+    }
+
+    .nav-links {
+        font-size: 18px;
+    }
+
+    #top {
+        position: absolute;
+        top:0;
+    }
+
+    #bio {
+        position: absolute;
+        top: 200px;
+    }
+
+    #portfolio {
+        position: absolute;
+        top: 1100px;
+    }
+
+    #contact {
+        position: absolute;
+        top: 2970px;
+    }
+
+    #resume {
+        position: absolute;
+        top: 3200px;
+    }
+
+
+    #resume-small {
+        position: absolute;
+        right: 5%;
+        bottom: 15%;
+    }
+
+    #contact-small {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+    }
+
+    #portfolio-small {
+        position: absolute;
+        right: 30%;
+        bottom: 15%;
+    }
+
+    #about-me-small {
+        position: absolute;
+        right: 30%;
+        bottom: 50%;
+    }
+
+    .banner img {
+        width: 390px;
+    }
+
+    .content-bio{
+        width: 340px;
+        color: var(--text-color-light);
+        font-family: 'Trebuchet MS', sans-serif;
+        margin-right: 0;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .port-content-whole {
+        width: 330px;
+    }
+
+    .bio, .portfolio, .contact, .resume {
+        display: flex;
+        flex-flow: column wrap;
+        margin-left: 5%;
+    }
+
+    .bio h2, .portfolio h2, .contact h2, .resume h2  {
+        border-right: none;
+        border-bottom: 2px solid var(--secondary-color);
+        width: 95%;
+        text-align: center;
+    }
+
+    .content-port1 img, .content-port2 img, .content-port3 img, .content-port4 img, .content-port5 img, .content-port6 img {
+        width: 330px;
+    }
+
+    .resume-content {
+        width: 330px;
+    }
+
+    #current {
+        position: relative;
+    }
+    #current ul {
+        padding-left: 80px;
+        bottom: 20%;
+    }
+
+    #current ul li {
+        margin-bottom: 5px
+    }
+
+    #break {
+        width: 350px;
+    }
+
+    #previous-end3, #previous-start3 {
+        width: 330px;
+    }
+
+    #previous-end3 h3, #previous-start3 h3 {
+        width: 33px;
+    }
+}               
