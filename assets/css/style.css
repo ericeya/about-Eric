@@ -1259,4 +1259,11 @@ footer h3 {
     #previous-end3 h3, #previous-start3 h3 {
         width: 33px;
     }
+
+    .contact-content {
+        width: 330px;
+    }
+    .contact-content a {
+       font-size: 12px;
+    }
 }               
